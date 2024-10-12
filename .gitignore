@@ -1,0 +1,12 @@
+# Personal
+/personal_records/
+/personal_information/
+/application_records/
+/references/
+/archives/
+
+# Mac
+.DS_Store
+
+# latex output
+output/
