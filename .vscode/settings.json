@@ -18,7 +18,9 @@
         "-output-directory=%OUTDIR%",
         "%DOC%"
       ],
-      "env": {}
+      "env": {
+        "TEXINPUTS": "%WORKSPACE_FOLDER%/application_documents/styles//:"
+      }
     }
   ],
   "latex-workshop.latex.outDir": "%DIR%/output"
