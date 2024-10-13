@@ -1,8 +1,9 @@
 {
   "latex-workshop.latex.recipes": [
     {
-      "name": "xelatex",
+      "name": "xelatex * 2",
       "tools": [
+        "xelatex",
         "xelatex"
       ]
     }
