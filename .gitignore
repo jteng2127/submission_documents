@@ -11,3 +11,6 @@ particulars.tex
 
 # latex output
 output/
+
+# external files
+/external_resources/
