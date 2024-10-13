@@ -1,0 +1,81 @@
+\subsection*{實務專案}
+
+\subsubsection*{SlideTalker - 頭部畫面融合演講影片 \hfill 2023/02 - 2024/01}
+\begin{itemize}
+    \item 於「2023資訊智慧創新跨域專題競賽」取得\bfr{優等獎}。
+    \item 主要貢獻：提供網頁應用程式讓演講者上傳頭像照片和語音，生成\bfr{頭像模擬演講影片}並嵌入講解影片，提高觀眾的專注度與學習效果。
+    \item 系統框架：
+    \begin{itemize}
+        \item 我負責開發 \bfr{React 前端網頁}與架設 \bfr{Kubernetes 分散式系統}。
+        \item 後端以 Rust Rocket 開發 API server，並以 Python Flask 開發 Task server。
+    \end{itemize}
+    \item 技術採用：
+    \begin{itemize}
+        \item SadTalker：使用頭像照片、語音，生成頭像模擬演講影片。
+        \item OpenAI Whisper：辨識語音並生成 AI 字幕內容。
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{TravelTracker - 旅遊紀錄整理工具 \hfill 2023/04 - 2024/01}
+\begin{itemize}
+    \item 由徒步環島啟發，於「2023 全國大專校院智慧創新暨跨域整合創作競賽」\bfr{晉級決賽}。
+    \item 主要貢獻：提供手機 APP，整合旅遊的 GPS 軌跡與多媒體資料，並提供 AI 對話與圖像自動標記技術，簡化旅遊過程中的記錄整理工作。
+    \item 系統框架：以 \textbf{Flutter} 框架開發，支援\bfr{多平台建置}。
+    \item 架構設計：使用 \bfr{Clean Architecture} 設計：
+    \begin{itemize}
+        \item 分離 Entity 與 Use Case 等模組層，達成\bfr{依賴反轉}與\bfr{關注點分離}並方便單元測試。
+        \item 我負責設計架構並實作 Entity、Use Case 等核心程式碼與各層介面。
+        \item 使用 Repository 與 Data Source 層管理資料並與資料庫溝通。
+        \item 使用 View Model 層管理 UI 狀態以及雙向綁定資料。
+    \end{itemize}
+    \item 技術採用：
+    \begin{itemize}
+        \item 透過 GPS 軌跡推算拍攝地點並顯示照片縮圖，讓資料的找尋更為簡便
+        \item OpenAI CLIP：自動標註多媒體資料，提高資料搜尋效率。
+        \item ChatGPT：利用提示工程進行 AI 對話，將使用者的對話中的要求轉換成自動化操作，讓使用者能夠更快速的完成任務。
+    \end{itemize}
+\end{itemize}
+
+% \subsubsection*{Lazer Vs Moiety \hfill 2021/10 - 2022/06}
+% \begin{itemize}
+%     \item 協助「國立台灣海洋大學食品科學系」製作教育遊戲。
+%     \item 主要貢獻：使用 \textbf{Unity} 開發\bfr{跨平台教育遊戲}，支援網頁應用程式、Android 及 IOS 平台。
+%     \item 系統框架：
+%     \begin{itemize}
+%         \item 我負責關卡設計及使用 \textbf{C\#} 在 Unity 引擎開發遊戲邏輯。
+%         \item 串接 Firebase 作為帳號系統與資料庫，紀錄使用者的遊戲進度。
+%     \end{itemize}
+% \end{itemize}
+
+\subsection*{課程專案}
+
+\subsubsection*{Java 課程 - GPS 軌跡分析系統 \hfill 2022/09 - 2023/01}
+\begin{itemize}
+    \item 該專案取得班級成績\bfr{排名第一}。
+    \item 主要貢獻：在桌面應用程式進行 GPS 軌跡的編輯、平滑化及熱點分析。
+    \item 系統框架：
+    \begin{itemize}
+        \item 我負責使用 \textbf{Java Spring Boot} 框架開發 \textbf{RESTful API} 後端與建立分析邏輯。
+        \item 前端以 Vite 框架開發。
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{軟體工程課程 - SCAF開發輔助工具 \hfill 2022/09 - 2023/01}
+\begin{itemize}
+    \item 該專案取得班級成績\bfr{排名第二}。
+    \item 主要貢獻：提供網頁與命令列介面，配合軟體的瀑布式及敏捷式開發模式，針對「需求分析-設計-開發-測試-發布」的流程進行輔助。
+    \item 技術採用：
+    \begin{itemize}
+        \item 我負責使用 \textbf{Golang} 的 CLI 套件開發命令列介面，可互動式的設計使指令使用更直覺。
+    \end{itemize}
+\end{itemize}
+
+% \subsubsection*{物聯網課程 - 居家電量分析系統 \hfill 2023/02 - 2023/06}
+% \begin{itemize}
+%     \item 主要貢獻：提供一個可以分析及預測家中各電器用電量的系統。
+%     \item 系統架構
+%     \begin{itemize}
+%         \item 我負責使用 \textbf{Flutter} 開發手機 APP，並訓練 \textbf{LSTM} 模型預測未來的用電量。
+%         \item 使用感測器透過 WiFi 傳送數據給後端伺服器，並在手機APP上顯示分析結果。
+%     \end{itemize}
+% \end{itemize}
