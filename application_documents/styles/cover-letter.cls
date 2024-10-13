@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cover-letter}[2024/10/13 Cover letter class]
 
-\LoadClass[a4paper,12pt]{article}
+\LoadClass[a4paper,11pt]{article}
 
 % 能使用 itemize、enumerate
 \RequirePackage{enumitem}
@@ -26,6 +26,7 @@
 
 % 設定區域行距
 \RequirePackage{setspace}
+\setstretch{1.3}
 
 % 設定段落行距
 \setlength{\parskip}{1em}
@@ -64,7 +65,7 @@
 \lfoot{}
 \cfoot{}
 \rfoot{} 
-% \rfoot{ 第 \thepage 頁} 
+\rfoot{ 第 \thepage 頁} 
 % \rfoot{ 共 \pageref{LastPage} 頁 第  \thepage   頁} 
 
 
@@ -78,10 +79,10 @@
 \RequirePackage{fontspec}
 \setmainfont{Helvetica}
 % 中文字體設定
-\RequirePackage{xeCJK}
-\setCJKmainfont{Noto Sans TC}
+\RequirePackage[slantfont,boldfont]{xeCJK}
+\setCJKmainfont{Noto Serif TC}
 \setCJKsansfont{Noto Sans TC}
-\setCJKmonofont{Noto Sans TC}
+\setCJKmonofont{Noto Sans Mono CJK TC}
 
 % 大標題樣式
 \RequirePackage{titling}
@@ -95,7 +96,7 @@
 \RequirePackage{titlesec}
 
 \titleformat{\section}{\centering\Large\bfseries}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{0em}{1em}
+\titlespacing*{\section}{0pt}{1em}{2em}
 
 \titleformat{\subsection}{\centering\large\bfseries}{}{0em}{}[]
 \titlespacing*{\subsection}{0pt}{0em}{0em}
@@ -105,7 +106,8 @@
 % 目錄樣式
 \RequirePackage{titletoc}
 
-\titlecontents{section}[0em]{\setstretch{1.5}\bfseries}{\hspace{0em}}{}{\titlerule*[0.5pc]{.}\contentspage}
+\titlecontents{section}[0em]{\setstretch{1.5}\bfseries}{\hspace{0em}}{}{\titlerule*[.5pc]{.}\contentspage}
+\titlecontents{subsection}[3em]{\setstretch{1.5}}{\hspace{0em}}{}{\titlerule*[0.5pc]{.}\contentspage}
 
 % 目錄名稱
 \renewcommand{\contentsname}{目錄}
@@ -115,6 +117,6 @@
 
 % \let\originaltextbf\textbf
 % \renewcommand{\textbf}[1]{\originaltextbf{\textcolor{red}{#1}}}
-\newcommand{\textbfred}[1]{\textcolor{red}{\textbf{#1}}}
-
-
+\newcommand{\textbfc}[2]{\textcolor{#1}{\textbf{#2}}}
+\newcommand{\bfr}[1]{\textcolor{red}{\textbf{#1}}}
+\newcommand{\pagerule}{\noindent\rule{\textwidth}{1pt}}
