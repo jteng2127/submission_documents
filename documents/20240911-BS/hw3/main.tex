@@ -1,0 +1,111 @@
+\documentclass{homework}
+
+\input{particulars}
+
+\sisetup{round-precision=3}
+
+\begin{document}
+
+\title{Biostatistics Homework 3}
+\author{\chineseName \masterStudentID}
+\date{}
+\maketitle
+
+\section{}
+
+\begin{gather*}
+A: prosperous, B: educated \\
+P(A)=0.134, P(B)=0.254, P(A\cap B)=0.080
+\end{gather*}
+
+\subsection{\(P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.308\)}
+
+\subsection{\(P(B|A) = \frac{P(A \cap B)}{P(A)} = 0.597\)}
+
+\subsection{\(P(A|B) = \frac{P(A \cap B)}{P(B)} = 0.315\)}
+
+\subsection{A and B are not independent because \(P(A)P(B) = 0.034 \leq P(A \cap B) = 0.080\), meaning that they are positively correlated.}
+
+\section{}
+
+\subsection{It's not possible because the study is case-control, not cohort, and the relative risk can only be calculated in cohort studies.}
+
+\subsection{}
+
+\[
+odds\ ratio = \frac{\frac{273}{716}}{\frac{2641}{7260}} = 1.048
+\]
+
+The use of oral contraceptive is only slightly associated with breast cancer, it will slightly increase the risk of breast cancer.
+
+\section{}
+
+\subsection{$Pr(X=8) = 1 - 0.03 - 0.01 - 0.04 - 0.3 - 0.3 - 0.1 - 0.07 = 0.15$}
+
+\subsection{}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{output/p3_b.png}
+    \caption{The CDF of $Pr(X \leq x)$ for $0\leq x\leq 10$}
+\end{figure}
+
+\subsection{}
+
+\begin{align*}
+E(X) &= 1 \cdot 0.03 + 2 \cdot 0.01 + 3 \cdot 0.04 + 4 \cdot 0.3 + 5 \cdot 0.3 + 6 \cdot 0.1 + 7 \cdot 0.07 + 8 \cdot 0.15 \\
+&= 5.16 \\
+E(X^2) &= 1^2 \cdot 0.03 + 2^2 \cdot 0.01 + 3^2 \cdot 0.04 + 4^2 \cdot 0.3 + 5^2 \cdot 0.3 + 6^2 \cdot 0.1 + 7^2 \cdot 0.07 + 8^2 \cdot 0.15 \\
+&= 29.36 \\
+Var(X) &= E(X^2) - E(X)^2 = 29.36 - 5.16^2 \\
+&= 2.7344
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+    E(exp(X)) &= \sum_x Pr(X=x) * exp(x) \\
+    &= 0.03 * e^1 + 0.01 * e^2 + 0.04 * e^3 + 0.3 * e^4 + 0.3 * e^5 + 0.1 * e^6 + 0.07 * e^7 + 0.15 * e^8 \\
+    &= 626.113
+\end{align*}
+
+\refstepcounter{section} % No p4
+
+\section{}
+
+\[X \sim Binomial(20, 0.6)\]
+
+\subsection{$E(X)=n\cdot p = 20 \cdot 0.6 = 12$}
+
+\subsection{}
+
+\begin{align*}
+    P(X = k) &= \binom{n}{k} p^k (1-p)^{n-k} \\
+    P(X \leq 9) &= \sum_{k=0}^{9} \binom{20}{k} 0.6^k \cdot 0.4^{20-k} = 0.1275 \\ % scipy.stats.binom.cdf(9, 20, 0.6)
+\end{align*}
+
+$P(X \leq 9)$ is p-value, which is larger than 0.05, so we doesn't have strong evidence to reject the 60\% figure.
+
+\section{}
+
+\[
+X \sim binomial(10, 0.8)
+\]
+
+\subsection{}
+
+\begin{align*}
+    P(X \geq 8) &= \sum_{k=8}^{10} \binom{10}{k} 0.8^k \cdot 0.2^{10-k} \\
+    &= \sum_{k=8}^{10}\frac{10!}{k!(10-k)!} 0.8^k \cdot 0.2^{10-k} \\
+    &= 0.6778 \\
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+    P(X \leq 1) &= \sum_{k=0}^{1} \binom{10}{k} 0.8^k \cdot 0.2^{10-k} \\
+    &= \sum_{k=0}^{1}\frac{10!}{k!(10-k)!} 0.8^k \cdot 0.2^{10-k} \\
+    &= 4.1984 \times 10^{-6}
+\end{align*}
+
+\end{document}
