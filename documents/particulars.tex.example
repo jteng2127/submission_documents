@@ -1,0 +1,24 @@
+% replace and uncomment the following with your own information
+
+% \def\firstName{First Name}
+% \def\lastName{Lastname}
+% \def\chineseName{王小明}
+% \def\email{mail@example.com}
+% \def\linkedin{linkedin.com/in/example}
+% \def\github{github.com/example}
+% \def\internationalPhoneNumber{+886 xxx-xxx-xxx}
+% \def\mobilePhoneNumber{09xx-xxx-xxx}
+
+% \def\bachelorUniversity{National Taiwan University}
+% \def\abbreviatedBachelorUniversity{NTU}
+% \def\chineseBachelorUniversity{國立臺灣大學}
+% \def\bachelorDeparment{Deparment of Computer Science and Information Engineering} % can't use &
+% \def\chineseBachelorDeparment{資訊工程學系}
+% \def\bachelorStudentID{B12345678}
+
+% \def\masterUniversity{National Taiwan University}
+% \def\abbreviatedMasterUniversity{NTU}
+% \def\chineseMasterUniversity{國立臺灣大學}
+% \def\masterInstitute{Deparment of Computer Science and Information Engineering}
+% \def\chineseMasterInstitute{資訊工程研究所}
+% \def\masterStudentID{R12345678}
