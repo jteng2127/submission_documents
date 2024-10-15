@@ -12,5 +12,7 @@ particulars.tex
 # latex output
 output/
 
+/documents/test/
+
 # external files
 /external_resources/
