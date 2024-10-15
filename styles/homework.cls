@@ -30,6 +30,7 @@
 
 % Package for including graphics (e.g., images)
 \RequirePackage{graphicx}
+\RequirePackage{subcaption}
 
 % Custom environment for indented sections (e.g., subsubsections)
 \RequirePackage{changepage}
