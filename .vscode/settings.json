@@ -20,7 +20,7 @@
         "%DOC%"
       ],
       "env": {
-        "TEXINPUTS": "%WORKSPACE_FOLDER%/styles//:"
+        "TEXINPUTS": "%WORKSPACE_FOLDER%/styles//:%WORKSPACE_FOLDER%/documents/:",
       }
     }
   ],
