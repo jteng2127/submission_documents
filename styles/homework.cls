@@ -53,7 +53,7 @@
 \RequirePackage{siunitx}
 \sisetup{
   round-mode = places,
-  round-precision = 8,
+  round-precision = 3,
   group-separator = {},
 }
 
