@@ -1,0 +1,4 @@
+Block size: 8
+Search range: 16
+PSNR: 29.9308
+Execution time: 1.59561 s
