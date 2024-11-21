@@ -114,9 +114,3 @@
 
 % 字體顏色
 \RequirePackage{xcolor}
-
-% \let\originaltextbf\textbf
-% \renewcommand{\textbf}[1]{\originaltextbf{\textcolor{red}{#1}}}
-\newcommand{\textbfc}[2]{\textcolor{#1}{\textbf{#2}}}
-\newcommand{\bfr}[1]{\textcolor{red}{\textbf{#1}}}
-\newcommand{\pagerule}{\noindent\rule{\textwidth}{1pt}}
