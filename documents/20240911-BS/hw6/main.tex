@@ -1,0 +1,309 @@
+\documentclass{homework}
+
+\input{particulars}
+
+\begin{document}
+
+\title{Biostatistics Homework 6}
+\author{\chineseName \masterStudentID}
+\date{}
+\maketitle
+
+\section{}
+
+\subsection{}
+
+\[
+\mu_{\bar{X}} = \mu = 40.125 \, \text{mm}
+\]
+
+\[
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{0.002}{\sqrt{4}} = 0.001 \, \text{mm}
+\]
+
+\subsection{}
+
+\[
+\bar{X} \sim N(\mu_{\bar{X}}, \sigma_{\bar{X}})
+\]
+
+For \( \bar{X} = 40.12 \), the z-score is:
+\[
+z_1 = \frac{40.12 - 40.125}{0.001} = -5
+\]
+
+For \( \bar{X} = 40.13 \), the z-score is:
+\[
+z_2 = \frac{40.13 - 40.125}{0.001} = 5
+\]
+
+\begin{align*}
+    P(40.12 < \bar{X} < 40.13) &= P(Z < 5) - P(Z < -5). \\
+    &\approx 1 - 0 = 1
+\end{align*}
+
+\section{}
+
+\subsection{}
+
+The distribution can't be Normal because:
+
+\begin{enumerate}
+    \item The count of people in a car is a discrete variable, while the Normal distribution is continuous.
+    \item The count is bounded below by 0 (no negative number of people).
+\end{enumerate}
+
+\subsection{}
+
+\[
+\sigma_{\text{total}} = \sqrt{n} \cdot \sigma = \sqrt{700} \cdot 0.75 \approx 19.843
+\]
+
+\[
+\mu_{\text{total}} = n \cdot \mu = 700 \cdot 1.5 = 1050
+\]
+
+\begin{align*}
+    P(X > 1075) &= P\left(Z > \frac{1075 - \mu_{\text{total}}}{\sigma_{\text{total}}}\right) \\
+    &= P\left(Z > \frac{1075 - 1050}{19.843}\right) \\
+    &= P(Z > 1.26) = 1 - P(Z < 1.26) \\
+    &\approx 1 - 0.8962 = 0.1038 (10.38\%)
+\end{align*}
+
+\section{}
+
+\subsection{}
+
+\[
+\operatorname{P}(Z > k) = 0.2 \implies \operatorname{P}(Z \leq k) = 1 - 0.2 = 0.8
+\]
+
+From the standard normal table, the z-score is approximately:
+\[
+k \approx 0.84
+\]
+
+\subsection{}
+
+\[
+\operatorname{P}(|Z| > b) = \operatorname{P}(Z > b) + \operatorname{P}(Z < -b) = 0.2
+\]
+
+By symmetry of the standard normal distribution:
+\[
+\operatorname{P}(Z > b) = \operatorname{P}(Z < -b) = 0.1
+\]
+
+From the standard normal table, the z-score is approximately:
+\[
+-b \approx -1.28 \implies b \approx 1.28
+\]
+
+\subsection{}
+
+\[
+X \sim N(\mu = 5, \sigma^2 = 9)
+\]
+\[
+\operatorname{P}(|X - 5| > c) = 0.2 \implies \operatorname{P}(X - 5 > c) + \operatorname{P}(X - 5 < c) = 0.2
+\]
+
+By symmetry of the normal distribution:
+\[
+\operatorname{P}(X > 5 + c) = \operatorname{P}(X < 5 - c) = 0.1
+\]
+
+\[
+\operatorname{P}(X < 5 - c) = \operatorname{P}(\frac{X - 5}{3} < \frac{-c}{3}) = \operatorname{P}(Z < \frac{-c}{3}) = 0.1
+\]
+
+From the standard normal table, the z-score is approximately:
+\[
+\frac{-c}{3} \approx -1.28 \implies c \approx 3.84
+\]
+
+\section{}
+
+\subsection{}
+
+Using Markov's inequality:
+\[
+P(X \geq a) \leq \frac{\mathbb{E}[X]}{a}
+\]
+
+\[
+P(X \geq 15) \leq \frac{10}{15} = \frac{2}{3}
+\]
+
+\subsection{}
+
+Using Chebyshev's inequality:
+\[
+P(|X - \mu| \geq k\sigma) \leq \frac{1}{k^2}
+\]
+
+\[
+|X - \mu| \geq 5 \implies k = \frac{5}{2} = 2.5
+\]
+
+\begin{align*}
+    P(|X - \mu| < k\sigma) &= 1 - P(|X - \mu| \geq k\sigma) \\
+    &\geq 1 - \frac{1}{k^2} = 1 - \frac{1}{6.25} = 1 - 0.16 = 0.84
+\end{align*}
+
+
+\[
+P(5 \leq X \leq 15) \geq 0.84
+\]
+
+\subsection{}
+
+Assuming the distribution is normal \( N(10, 2^2) \), the probability that \( X \) is between 5 and 15 is:
+\[
+P(5 \leq X \leq 15) = P\left(\frac{5 - 10}{2} \leq Z \leq \frac{15 - 10}{2}\right) = P(-2.5 \leq Z \leq 2.5)
+\]
+
+From the standard normal table:
+\[
+P(Z \leq 2.5) \approx 0.9938, \quad P(Z \leq -2.5) \approx 0.0062
+\]
+
+\[
+P(5 \leq X \leq 15) = P(-2.5 \leq Z \leq 2.5) = 0.9938 - 0.0062 = 0.9876
+\]
+
+The lower bound from Chebyshev's inequality: \( 0.84 \)
+
+The true probability under the normal distribution: \( 0.9876 \)
+
+The bound was slightly less than the true probability.
+
+\section{}
+
+\subsection{}
+
+The confidence interval for the mean \(\mu\) is given by:
+\[
+\overline{x} \pm z_{a/2} \cdot \frac{\sigma}{\sqrt{n}}, a = 0.05
+\]
+
+\[
+z_{a/2} \cdot \frac{\sigma}{\sqrt{n}} = 1.96 \cdot \frac{8}{\sqrt{14}} \approx 4.19
+\]
+
+\[
+\overline{x} \pm 4.19 = 91 \pm 4.19 = (86.81, 95.19)
+\]
+
+The 95\% confidence interval for \(\mu\) is:
+\[
+86.81 \leq \mu \leq 95.19
+\]
+
+\subsection{}
+
+The confidence interval for \(\mu\) is given by:
+\[
+\overline{x} \pm t \cdot \frac{s}{\sqrt{n}}
+\]
+
+% where:
+
+% - \(s = 8 \, \mathrm{mm}\) (sample standard deviation),
+
+% - \(t^*\) is the critical value from the \(t\)-distribution with \(n-1 = 14-1 = 13\) degrees of freedom for a 95\% confidence level.
+
+Using a \(t\)-table, for \(13\) degrees of freedom and 95\% confidence level:
+\[
+t \approx 2.160
+\]
+
+\[
+t \cdot \frac{s}{\sqrt{n}} = 2.160 \cdot \frac{8}{\sqrt{14}} \approx 4.62
+\]
+
+\[
+\overline{x} \pm 4.62 = 91 \pm 4.62 = (86.38, 95.62)
+\]
+
+The 95\% confidence interval for \(\mu\) is:
+\[
+86.38 \leq \mu \leq 95.62
+\]
+
+\section{}
+
+\subsection{}
+
+\[
+z_{a/2} \cdot \frac{\sigma}{\sqrt{n}} = 900, a = 0.05
+\]
+
+\[
+n = \left(\frac{z_{a/2} \cdot \sigma}{900}\right)^2 = \left(\frac{1.96 \cdot 10,500}{900}\right)^2 \approx 523
+\]
+
+\section{}
+
+\subsection{}
+
+The sampling distribution of the mean of 125 cars is approximately normal (Central Limit Theorem), with parameters:
+\[
+\mu_{\bar{X}} = \mu = 0.9 \, \mathrm{g/mi}, \quad \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{0.15}{\sqrt{125}} \approx 0.0134 \, \mathrm{g/mi}
+\]
+
+The approximate distribution is:
+\[
+\bar{X} \sim N(0.9, 0.0134^2)
+\]
+
+\subsection{}
+
+\[
+P(0.75 \leq \bar{X} \leq 1.1) = P\left(\frac{0.75 - 0.9}{0.0134} \leq Z \leq \frac{1.1 - 0.9}{0.0134}\right) \approx P(-11.19 \leq Z \leq 14.93)
+\]
+
+From the standard normal table:
+\[
+P(Z < -11.19) \approx 0,\quad P(Z < 14.93) \approx 1
+\]
+
+\[
+P(0.75 \leq \bar{X} \leq 1.1) \approx 1 - 0 = 1
+\]
+
+\subsection{}
+
+To find \(L\), solve:
+\[
+P(\bar{X} > L) = 0.01 \implies P(\frac{\bar{X} - \mu}{\sigma} > \frac{L - \mu}{\sigma}) = P(\frac{\bar{X} - \mu}{\sigma} > z) = 0.01
+\]
+
+From the standard normal table, the z-score is:
+\[
+z = 2.33
+\]
+
+\[
+z = \frac{L - \mu}{\sigma} \implies L = \mu + z \cdot \sigma = 0.9 + 2.33 \cdot 0.0134 \approx 0.9312
+\]
+
+\section{}
+
+\subsection{}
+
+Confidence interval for \(p\) (a = 0.1):
+\[
+\hat{p} \pm z_{a/2} \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}} = 0.73 \pm 1.645 \sqrt{\frac{0.73(1 - 0.73)}{900}} \approx 0.73 \pm 0.0243
+\]
+
+The 90\% confidence interval is:
+\[
+(0.7057, 0.7543)
+\]
+
+\subsection{}
+
+The margin of error is \(0.0243\) (2.43\%).
+
+\end{document}
