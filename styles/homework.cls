@@ -15,6 +15,10 @@
 \setCJKsansfont{Noto Sans TC}
 \setCJKmonofont{Noto Sans TC}
 
+% bookmark
+\RequirePackage{hyperref}
+\RequirePackage[atend, numbered]{bookmark}
+
 % Paragraph indent and line spacing settings
 \setlength{\parindent}{15pt}
 \linespread{1}
@@ -62,6 +66,10 @@
 
 % amsmath package for advanced mathematical expressions and alignments
 \RequirePackage{amsmath}
+\RequirePackage{amssymb}
 
 % Forest package for drawing probability trees and other tree diagrams
 \RequirePackage{forest}
+
+% Indent first paragraph of each section
+\RequirePackage{indentfirst}
