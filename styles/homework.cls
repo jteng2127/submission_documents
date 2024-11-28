@@ -50,7 +50,7 @@
 
 % Titlesec package to format subsection and subsubsection titles
 \RequirePackage{titlesec}
-\titleformat{\subsection}[hang]{\normalfont\normalsize}{\thesubsection}{1em}{}
+\titleformat{\subsection}[hang]{\normalfont\large}{\textbf{\thesubsection}}{1em}{}
 \titleformat{\subsubsection}[hang]{\normalfont\normalsize}{\thesubsubsection}{1em}{}
 
 % siunitx package for formatting numbers and units
@@ -73,3 +73,33 @@
 
 % Indent first paragraph of each section
 \RequirePackage{indentfirst}
+
+% code listings
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\normalsize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
