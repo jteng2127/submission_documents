@@ -1,0 +1,523 @@
+\documentclass{homework}
+
+\input{particulars}
+
+\begin{document}
+
+\title{Biostatistics Homework 7}
+\author{\chineseName \masterStudentID}
+\date{}
+\maketitle
+
+\section{}
+
+\subsection{}
+
+A 95\% confidence interval with \( n = 12 \):
+
+\[
+\alpha = 1 - 0.95 = 0.05, \quad \frac{\alpha}{2} = 0.025, \quad df = n - 1 = 11
+\]
+
+From the T-Table:
+
+\[
+t^* = 2.201
+\]
+
+\subsection{}
+
+A 99\% confidence interval with \( n = 24 \):
+
+\[
+\alpha = 1 - 0.99 = 0.01, \quad \frac{\alpha}{2} = 0.005, \quad df = n - 1 = 23
+\]
+
+From the T-Table:
+
+\[
+t^* = 2.807
+\]
+
+\subsection{}
+
+A 90\% confidence interval with \( n = 100 \):
+
+\[
+\alpha = 1 - 0.90 = 0.10, \quad \frac{\alpha}{2} = 0.05, \quad df = n - 1 = 99
+\]
+
+From the T-Table:
+
+\[
+t^* = 1.660
+\]
+
+\section{}
+
+\subsection{}
+
+The standard deviation of the mean length \( \bar{X} \):
+
+\[
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{8}{\sqrt{14}} \approx 2.14 \, \text{mm}
+\]
+
+\subsection{}
+
+The probability that the sample mean body length is less than 80 mm:
+
+\[
+z = \frac{\bar{X} - \mu}{\sigma_{\bar{X}}} = \frac{80 - 86}{2.14} \approx -2.80
+\]
+
+From the standard normal table:
+
+\[
+P(Z < -2.80) \approx 0.0026
+\]
+
+\subsection{}
+
+95\% confidence interval for the mean body length:
+
+\[
+\bar{X} \pm z^* \cdot \sigma_{\bar{X}}
+\]
+
+For 95\%, \( z^* = 1.96 \):
+
+\[
+91 \pm 1.96 \cdot 2.14
+\]
+
+\[
+91 \pm 4.19 \implies (86.81, 95.19)
+\]
+
+\subsection{}
+
+90\% confidence interval for the mean body length:
+
+\[
+\bar{X} \pm z^* \cdot \sigma_{\bar{X}}
+\]
+
+For 90\%, \( z^* = 1.645 \):
+
+\[
+91 \pm 1.645 \cdot 2.14
+\]
+
+\[
+91 \pm 3.52 \implies (87.48, 94.52)
+\]
+
+\subsection{}
+
+95\% confidence interval for \( \mu \) with unknown \( \sigma \) (using sample standard deviation \( s = 8 \)):
+
+\[
+\bar{X} \pm t^* \cdot \frac{s}{\sqrt{n}}
+\]
+
+For \( n = 14 \), \( df = 13 \), and 95\%, \( t^* = 2.160 \):
+
+\[
+91 \pm 2.160 \cdot \frac{8}{\sqrt{14}}
+\]
+
+\[
+91 \pm 4.62 \implies (86.38, 95.62)
+\]
+
+\section{}
+
+\subsection{}
+
+Rejection rule:
+
+For a one-tailed test (\( H_0: \mu = 20 \), \( H_a: \mu > 20 \)) with \( \alpha = 0.05 \), we reject \( H_0 \) if the test statistic \( t \) exceeds the critical value \( t^* \).
+
+Degrees of freedom:
+\[
+df = n - 1 = 36 - 1 = 35
+\]
+
+From the T-Table for \( \alpha = 0.05 \) and \( df = 35 \):
+\[
+t^* = 1.6905 (\text{average of } df = 30 \text{ and } df = 40)
+\]
+
+Test statistic:
+\[
+t = \frac{\bar{X} - \mu_0}{s / \sqrt{n}} = \frac{20.9 - 20}{2.9 / \sqrt{36}} = \frac{0.9}{0.4833} \approx 1.86
+\]
+
+Since \( t = 1.86 > t^* = 1.690 \), we reject \( H_0 \).
+
+\subsection{}
+
+Compute the p-value:
+
+The p-value is the probability of observing a test statistic \( t \geq 1.86 \) under the null hypothesis. From the T-Table for \( df = 35 \):
+
+\[
+P(T > 1.86) \approx 0.035
+\]
+
+Conclusion:
+
+Since \( p = 0.035 < \alpha = 0.05 \), we reject \( H_0 \).
+
+\section{}
+
+\subsection{}
+
+Rejection rule:
+
+For a two-tailed test (\( H_0: \mu = 30 \), \( H_a: \mu \neq 30 \)) with \( \alpha = 0.05 \), we reject \( H_0 \) if the test statistic \( z \) falls outside the range \( -z^* \) to \( z^* \).
+
+From the Z-Table for \( \alpha/2 = 0.025 \):
+\[
+z^* = 1.96
+\]
+
+Test statistic:
+\[
+z = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}} = \frac{29.3 - 30}{2.5 / \sqrt{20}} = \frac{-0.7}{0.559} \approx -1.25
+\]
+
+\subsection{}
+
+Compute the p-value:
+
+\[
+P(z < -1.25) = P(z > 1.25) \approx 0.1057
+\]
+
+Two-tailed p-value:
+\[
+p = 2 \cdot 0.1057 = 0.2114
+\]
+
+Conclusion:
+
+Since \( p = 0.2114 > \alpha = 0.05 \), we fail to reject \( H_0 \).
+
+\subsection{}
+
+95\% confidence interval for \( \mu \):
+
+\[
+\bar{X} \pm z^* \cdot \frac{\sigma}{\sqrt{n}}
+\]
+
+For \( z^* = 1.96 \) and \( \frac{\sigma}{\sqrt{n}} = \frac{2.5}{\sqrt{20}} \approx 0.559 \):
+
+\[
+29.3 \pm 2.093 \cdot 0.559
+\]
+
+\[
+29.3 \pm 1.17 \implies (28.13, 30.47)
+\]
+
+The 95\% confidence interval for \( \mu \) is (28.13, 30.47).
+
+\section{}
+
+\subsection{}
+
+First, calculate the sample mean \( \bar{X} \) and the sample standard deviation \( s \):
+
+\[
+\bar{X} = \frac{\sum X_i}{n} = \frac{0.95 + 1.02 + 1.01 + 0.98}{4} = 0.99
+\]
+
+\[
+s = \sqrt{\frac{\sum (X_i - \bar{X})^2}{n-1}} = \sqrt{\frac{(0.95 - 0.99)^2 + (1.02 - 0.99)^2 + (1.01 - 0.99)^2 + (0.98 - 0.99)^2}{3}} \approx 0.0316
+\]
+
+Standard error of the mean:
+\[
+SE = \frac{s}{\sqrt{n}} = \frac{0.0316}{\sqrt{4}} = 0.0158
+\]
+
+For \( df = n-1 = 3 \) and 95\% confidence level, from the T-Table:
+\[
+t^* = 3.182
+\]
+
+Confidence interval:
+\[
+\bar{X} \pm t^* \cdot SE = 0.99 \pm 3.182 \cdot 0.0158
+\]
+
+\[
+0.99 \pm 0.0503 \implies (0.9397, 1.0403)
+\]
+
+The 95\% confidence interval for \( \mu \) is (0.94, 1.04)
+
+\subsection{}
+
+\( H_0: \mu = 1 \) (the scale is accurate)
+
+\( H_a: \mu \neq 1 \) (the scale is not accurate)
+
+Test statistic:
+\[
+t = \frac{\bar{X} - \mu_0}{SE} = \frac{0.99 - 1}{0.0158} \approx -0.63
+\]
+
+Degrees of freedom:
+\[
+df = n - 1 = 3
+\]
+
+Critical value for two-tailed test at \( \alpha = 0.05 \):
+\[
+t^* = 3.182
+\]
+
+Since \( |t| = 0.63 < t^* = 3.182 \), we fail to reject \( H_0 \).
+
+\section{}
+
+\subsection{}
+
+Rejection rule: Reject \( H_0 \) if \( \bar{X} > 26 \).
+
+Given \( \mu = 25 \) under \( H_0 \), the sampling distribution of \( \bar{X} \) is:
+
+\[
+\bar{X} \sim N(\mu, \sigma_{\bar{X}})
+\]
+
+where:
+\[
+\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{50}{\sqrt{900}} = \frac{50}{30} = 1.67
+\]
+
+The test statistic under \( H_0 \) is:
+\[
+z = \frac{\bar{X} - \mu}{\sigma_{\bar{X}}} = \frac{26 - 25}{1.67} \approx 0.60
+\]
+
+From the standard normal table:
+\[
+P(Z > 0.60) \approx 0.2743
+\]
+
+Thus, the probability of a Type I error is:
+\[
+\alpha = P(Z > 0.60) = 0.2743
+\]
+
+\subsection{}
+
+For hypothesis \( \mu = 28 \), the sampling distribution of \( \bar{X} \) is:
+
+\[
+\bar{X} \sim N(28, 1.67)
+\]
+
+The critical value for rejecting \( H_0 \) is \( \bar{X} > 26 \). The test statistic under \( \mu = 28 \) is:
+
+\[
+z = \frac{26 - 28}{1.67} \approx -1.20
+\]
+
+From the standard normal table:
+\[
+P(Z \leq -1.20) = 0.1151
+\]
+
+Thus, the probability of a Type II error is:
+\[
+\beta = P(\bar{X} \leq 26 | \mu = 28) = 0.1151
+\]
+
+\subsection{}
+
+For the hypothesis \( \mu = 30 \), the sampling distribution of \( \bar{X} \) is:
+
+\[
+\bar{X} \sim N(30, 1.67)
+\]
+
+The critical value for rejecting \( H_0 \) is \( \bar{X} > 26 \). The test statistic under \( \mu = 30 \) is:
+
+\[
+z = \frac{26 - 30}{1.67} \approx -2.40
+\]
+
+From the standard normal table:
+\[
+P(Z \leq -2.40) = 0.0082
+\]
+
+Thus, the probability of a Type II error is:
+\[
+\beta = P(\bar{X} \leq 26 | \mu = 30) = 0.0082
+\]
+
+Power of the test when \( \mu = 30 \):
+\[
+\text{Power} = 1 - \beta = 1 - 0.0082 = 0.9918
+\]
+
+\section{}
+
+Hypotheses:
+\[
+H_0: \mu_d = 0 \quad \text{(no difference in pain levels before and after hypnotism)}
+\]
+\[
+H_a: \mu_d > 0 \quad \text{(pain levels are lower after hypnotism)}
+\]
+
+
+Calculate the differences:
+\[
+d_i = \text{Before} - \text{After}
+\]
+
+\[
+d = [-0.2, 4.1, 1.6, 1.8, 3.2, 2.0, 2.9, 9.6]
+\]
+
+Mean of the differences (\( \bar{d} \)):
+\[
+\bar{d} = \frac{\sum d_i}{n} = \frac{-0.2 + 4.1 + 1.6 + 1.8 + 3.2 + 2.0 + 2.9 + 9.6}{8} \approx 3.125
+\]
+
+Standard deviation of the differences (\( s_d \)):
+\[
+s_d = \sqrt{\frac{\sum (d_i - \bar{d})^2}{n-1}} = 2.9114
+\]
+
+Standard error of the mean difference (\( SE_d \)):
+\[
+SE_d = \frac{s_d}{\sqrt{n}} = 1.029
+\]
+
+Test statistic (\( t \)):
+\[
+t = \frac{\bar{d} - \mu_0}{SE_d} = \frac{3.125 - 0}{1.029} \approx 3.04
+\]
+
+Degrees of freedom (\( df \)):
+\[
+df = n - 1 = 7
+\]
+
+Critical value (\( t^* \)) at \( \alpha = 0.05 \) for a one-tailed test with \( df = 7 \):
+\[
+t^* = 1.895
+\]
+
+Decision rule: Reject \( H_0 \) if \( t > t^* \).
+
+Since \( 3.04 > 1.895 \), we reject \( H_0 \) and conclude that pain levels are significantly lower after hypnotism.
+
+\section{}
+
+\subsection{}
+
+Hypotheses:
+
+\[
+H_0: \mu_{\text{females}} - \mu_{\text{males}} = 0 \quad \text{(no difference in total cholesterol levels)}
+\]
+\[
+H_a: \mu_{\text{females}} - \mu_{\text{males}} \neq 0 \quad \text{(a difference exists)}
+\]
+
+The two-sample t-test assuming equal variances is given by:
+\[
+t = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{s_p^2 \left(\frac{1}{n_1} + \frac{1}{n_2}\right)}}
+\]
+
+where the pooled variance is:
+\[
+s_p = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2} = \frac{(71 - 1)(34.79^2) + (37 - 1)(33.24^2)}{71 + 37 - 2} = 1174.53
+\]
+
+Standard error:
+\[
+SE = \sqrt{s_p^2 \left(\frac{1}{n_1} + \frac{1}{n_2}\right)} = \sqrt{1174.53 \left(\frac{1}{71} + \frac{1}{37}\right)} \approx 6.95
+\]
+
+Test statistic:
+\[
+t = \frac{173.70 - 171.81}{6.95} \approx 0.27
+\]
+
+Degrees of freedom:
+\[
+df = n_1 + n_2 - 2 = 71 + 37 - 2 = 106
+\]
+
+P-value from the t-table, for \( t = 0.30 \) and \( df = 106 \):
+\[
+P \approx 0.76 \quad \text{(two-tailed)}
+\]
+
+The 95\% confidence interval for the difference in means is:
+\[
+(\bar{X}_1 - \bar{X}_2) \pm t^* \cdot SE
+\]
+
+where \( t^* = 1.984 \) for 95\% confidence and \( df = 106 \).
+
+\[
+(173.70 - 171.81) \pm 1.984 \cdot 6.95 = 1.89 \pm 13.79
+\]
+\[
+CI = (-11.9, 15.68)
+\]
+
+The P-value of \( 0.76 \) indicates no significant difference in total cholesterol levels between males and females. The confidence interval also contains 0, supporting this conclusion.
+
+\subsection{}
+
+Hypotheses:
+
+\[
+H_0: \mu_{\text{males}} - \mu_{\text{females}} = 0 \quad \text{(LDL levels are not higher in males)}
+\]
+\[
+H_a: \mu_{\text{males}} - \mu_{\text{females}} > 0 \quad \text{(LDL levels are higher in males)}
+\]
+
+Welch's t-test (assuming unequal variances) is given by:
+\[
+t = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
+\]
+
+Degrees of freedom are approximated using:
+\[
+df = \frac{\left(\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}\right)^2}{\frac{\left(\frac{s_1^2}{n_1}\right)^2}{n_1 - 1} + \frac{\left(\frac{s_2^2}{n_2}\right)^2}{n_2 - 1}} = 
+\frac{\left(\frac{31.05^2}{37} + \frac{29.78^2}{71}\right)^2}{\frac{\left(\frac{31.05^2}{37}\right)^2}{36} + \frac{\left(\frac{29.78^2}{71}\right)^2}{70}} \approx 70.46
+\]
+
+Standard error:
+\[
+SE = \sqrt{\frac{31.05^2}{37} + \frac{29.78^2}{71}} = \sqrt{26.05 + 12.49} \approx \sqrt{38.54} \approx 6.21
+\]
+
+Test statistic:
+\[
+t = \frac{109.44 - 96.38}{6.21} \approx 2.10
+\]
+
+P-value from the t-table, for \( t = 2.10 \) and \( df \approx 70.46 \):
+\[
+P \approx 0.019 \quad \text{(one-tailed)}
+\]
+
+Since \( P = 0.019 < \alpha = 0.05 \), we reject \( H_0 \).
+
+\end{document}
